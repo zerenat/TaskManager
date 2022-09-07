@@ -37,11 +37,6 @@ class TaskManager:
                 self.__last_run_time = current_time_tuple
             for task in tasks:
                 try:
-
-                    # TESTING
-                    self.__task_queue.put(task)
-                    # =======
-
                     execution_time = task['execution_times']
                     if execution_time[0] == time_object['hour']:
                         if execution_time[1] == time_object['minute']:
